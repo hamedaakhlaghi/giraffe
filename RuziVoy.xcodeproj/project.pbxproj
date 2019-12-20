@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */; };
+		0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */; };
+		0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */; };
 		05FCEDFF23A6BD6900C0BD10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */; };
 		05FCEE0123A6BD6900C0BD10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEE0023A6BD6900C0BD10 /* ViewController.swift */; };
 		05FCEE0423A6BD6900C0BD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FCEE0223A6BD6900C0BD10 /* Main.storyboard */; };
@@ -14,6 +17,9 @@
 		05FCEE0923A6BD6D00C0BD10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FCEE0723A6BD6D00C0BD10 /* LaunchScreen.storyboard */; };
 		05FCEE1423A6BD6D00C0BD10 /* RuziVoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEE1323A6BD6D00C0BD10 /* RuziVoyTests.swift */; };
 		05FCEE1F23A6BD6D00C0BD10 /* RuziVoyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEE1E23A6BD6D00C0BD10 /* RuziVoyUITests.swift */; };
+		8D14BDB6203A5F693A8DAF0D /* Pods_RuziVoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF665DF8C0F14DCE857EB4E /* Pods_RuziVoy.framework */; };
+		AEFFB60EDDA64F0AC2311261 /* Pods_RuziVoyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BD418EAF5F656B007E9848 /* Pods_RuziVoyTests.framework */; };
+		F594AB307F8C7B1B44DCE1C1 /* Pods_RuziVoy_RuziVoyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F997E2814FE4A6C97C8BDB62 /* Pods_RuziVoy_RuziVoyUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016B5A37D27A494608BF6035 /* Pods-RuziVoy-RuziVoyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoy-RuziVoyUITests.debug.xcconfig"; path = "Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		03E49AA41E9AB3884BF88E24 /* Pods-RuziVoyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoyTests.release.xcconfig"; path = "Target Support Files/Pods-RuziVoyTests/Pods-RuziVoyTests.release.xcconfig"; sourceTree = "<group>"; };
+		0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestinationViewController.swift; sourceTree = "<group>"; };
+		0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		05FCEDFB23A6BD6900C0BD10 /* RuziVoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuziVoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05FCEE0023A6BD6900C0BD10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,13 @@
 		05FCEE1A23A6BD6D00C0BD10 /* RuziVoyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuziVoyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FCEE1E23A6BD6D00C0BD10 /* RuziVoyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuziVoyUITests.swift; sourceTree = "<group>"; };
 		05FCEE2023A6BD6D00C0BD10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44F96A82D7B5246BA95169B9 /* Pods-RuziVoy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoy.debug.xcconfig"; path = "Target Support Files/Pods-RuziVoy/Pods-RuziVoy.debug.xcconfig"; sourceTree = "<group>"; };
+		6B5142E925B6623BF30BE080 /* Pods-RuziVoyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoyTests.debug.xcconfig"; path = "Target Support Files/Pods-RuziVoyTests/Pods-RuziVoyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2FC1E9A2E2F8A3599FB7238 /* Pods-RuziVoy-RuziVoyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoy-RuziVoyUITests.release.xcconfig"; path = "Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DFF665DF8C0F14DCE857EB4E /* Pods_RuziVoy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuziVoy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1A7789F6F7F7819FF7CAECB /* Pods-RuziVoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoy.release.xcconfig"; path = "Target Support Files/Pods-RuziVoy/Pods-RuziVoy.release.xcconfig"; sourceTree = "<group>"; };
+		E3BD418EAF5F656B007E9848 /* Pods_RuziVoyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuziVoyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F997E2814FE4A6C97C8BDB62 /* Pods_RuziVoy_RuziVoyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuziVoy_RuziVoyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D14BDB6203A5F693A8DAF0D /* Pods_RuziVoy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFFB60EDDA64F0AC2311261 /* Pods_RuziVoyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +88,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F594AB307F8C7B1B44DCE1C1 /* Pods_RuziVoy_RuziVoyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0525BBF823ACFBF6008EDDF2 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */,
+				0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */,
+				0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		0525BBF923ACFC02008EDDF2 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		05FCEDF223A6BD6900C0BD10 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				05FCEE1223A6BD6D00C0BD10 /* RuziVoyTests */,
 				05FCEE1D23A6BD6D00C0BD10 /* RuziVoyUITests */,
 				05FCEDFC23A6BD6900C0BD10 /* Products */,
+				936C9D70CCA50F68D1E999B9 /* Pods */,
+				52B9E7D390605AB55C0889F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +137,8 @@
 		05FCEDFD23A6BD6900C0BD10 /* RuziVoy */ = {
 			isa = PBXGroup;
 			children = (
+				0525BBF923ACFC02008EDDF2 /* data */,
+				0525BBF823ACFBF6008EDDF2 /* ui */,
 				05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */,
 				05FCEE0023A6BD6900C0BD10 /* ViewController.swift */,
 				05FCEE0223A6BD6900C0BD10 /* Main.storyboard */,
@@ -125,6 +167,29 @@
 			path = RuziVoyUITests;
 			sourceTree = "<group>";
 		};
+		52B9E7D390605AB55C0889F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFF665DF8C0F14DCE857EB4E /* Pods_RuziVoy.framework */,
+				F997E2814FE4A6C97C8BDB62 /* Pods_RuziVoy_RuziVoyUITests.framework */,
+				E3BD418EAF5F656B007E9848 /* Pods_RuziVoyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		936C9D70CCA50F68D1E999B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44F96A82D7B5246BA95169B9 /* Pods-RuziVoy.debug.xcconfig */,
+				E1A7789F6F7F7819FF7CAECB /* Pods-RuziVoy.release.xcconfig */,
+				016B5A37D27A494608BF6035 /* Pods-RuziVoy-RuziVoyUITests.debug.xcconfig */,
+				D2FC1E9A2E2F8A3599FB7238 /* Pods-RuziVoy-RuziVoyUITests.release.xcconfig */,
+				6B5142E925B6623BF30BE080 /* Pods-RuziVoyTests.debug.xcconfig */,
+				03E49AA41E9AB3884BF88E24 /* Pods-RuziVoyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05FCEE2323A6BD6D00C0BD10 /* Build configuration list for PBXNativeTarget "RuziVoy" */;
 			buildPhases = (
+				F2CAC7F77A16963CC08ED383 /* [CP] Check Pods Manifest.lock */,
 				05FCEDF723A6BD6900C0BD10 /* Sources */,
 				05FCEDF823A6BD6900C0BD10 /* Frameworks */,
 				05FCEDF923A6BD6900C0BD10 /* Resources */,
+				0FFEFD2A67CE89C54E8A6110 /* [CP] Copy Pods Resources */,
+				50BF4192DF264CF19A0B0A9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05FCEE2623A6BD6D00C0BD10 /* Build configuration list for PBXNativeTarget "RuziVoyTests" */;
 			buildPhases = (
+				DDE638AA911D80E49CA9E4AA /* [CP] Check Pods Manifest.lock */,
 				05FCEE0B23A6BD6D00C0BD10 /* Sources */,
 				05FCEE0C23A6BD6D00C0BD10 /* Frameworks */,
 				05FCEE0D23A6BD6D00C0BD10 /* Resources */,
@@ -167,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05FCEE2923A6BD6D00C0BD10 /* Build configuration list for PBXNativeTarget "RuziVoyUITests" */;
 			buildPhases = (
+				F3373B7846AB4248BA9E4838 /* [CP] Check Pods Manifest.lock */,
 				05FCEE1623A6BD6D00C0BD10 /* Sources */,
 				05FCEE1723A6BD6D00C0BD10 /* Frameworks */,
 				05FCEE1823A6BD6D00C0BD10 /* Resources */,
+				F31E34A6BC692A5A9F3CB013 /* [CP] Copy Pods Resources */,
+				5F268DE2225B748C2C084805 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,13 +323,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FFEFD2A67CE89C54E8A6110 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuziVoy/Pods-RuziVoy-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuziVoy/Pods-RuziVoy-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuziVoy/Pods-RuziVoy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50BF4192DF264CF19A0B0A9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuziVoy/Pods-RuziVoy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuziVoy/Pods-RuziVoy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuziVoy/Pods-RuziVoy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F268DE2225B748C2C084805 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDE638AA911D80E49CA9E4AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuziVoyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2CAC7F77A16963CC08ED383 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuziVoy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F31E34A6BC692A5A9F3CB013 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3373B7846AB4248BA9E4838 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuziVoy-RuziVoyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05FCEDF723A6BD6900C0BD10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				05FCEE0123A6BD6900C0BD10 /* ViewController.swift in Sources */,
+				0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */,
 				05FCEDFF23A6BD6900C0BD10 /* AppDelegate.swift in Sources */,
+				0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */,
+				0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +642,7 @@
 		};
 		05FCEE2423A6BD6D00C0BD10 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44F96A82D7B5246BA95169B9 /* Pods-RuziVoy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +661,7 @@
 		};
 		05FCEE2523A6BD6D00C0BD10 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A7789F6F7F7819FF7CAECB /* Pods-RuziVoy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +680,7 @@
 		};
 		05FCEE2723A6BD6D00C0BD10 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B5142E925B6623BF30BE080 /* Pods-RuziVoyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +702,7 @@
 		};
 		05FCEE2823A6BD6D00C0BD10 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03E49AA41E9AB3884BF88E24 /* Pods-RuziVoyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +724,7 @@
 		};
 		05FCEE2A23A6BD6D00C0BD10 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 016B5A37D27A494608BF6035 /* Pods-RuziVoy-RuziVoyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +745,7 @@
 		};
 		05FCEE2B23A6BD6D00C0BD10 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FC1E9A2E2F8A3599FB7238 /* Pods-RuziVoy-RuziVoyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
