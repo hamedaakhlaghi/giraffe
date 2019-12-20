@@ -128,11 +128,42 @@
                         <outlet property="labelFrom" destination="JEQ-Jh-60U" id="bfo-A7-bcO"/>
                         <outlet property="viewDestination" destination="CD5-da-oOL" id="w7f-0T-c8W"/>
                         <outlet property="viewOrigin" destination="TTV-4c-XFl" id="5rH-nB-Y6L"/>
+                        <segue destination="uGl-H4-9Go" kind="show" identifier="originDestinationToSelectLocation" id="ol1-Cu-y9q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="422.54464285714283"/>
+        </scene>
+        <!--Select Location View Controller-->
+        <scene sceneID="J0V-Kx-2j2">
+            <objects>
+                <viewController id="uGl-H4-9Go" customClass="SelectLocationViewController" customModule="RuziVoy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1VX-ne-2X1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJs-SL-cpq" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mfo-4v-CGd" firstAttribute="bottom" secondItem="HJs-SL-cpq" secondAttribute="bottom" id="HVn-xm-btC"/>
+                            <constraint firstItem="HJs-SL-cpq" firstAttribute="top" secondItem="Mfo-4v-CGd" secondAttribute="top" id="NFZ-D5-AZD"/>
+                            <constraint firstItem="HJs-SL-cpq" firstAttribute="leading" secondItem="Mfo-4v-CGd" secondAttribute="leading" id="Z2J-nj-Ejm"/>
+                            <constraint firstItem="Mfo-4v-CGd" firstAttribute="trailing" secondItem="HJs-SL-cpq" secondAttribute="trailing" id="r8T-sd-PKg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mfo-4v-CGd"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewMap" destination="HJs-SL-cpq" id="ZSA-Me-8K3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7KJ-tg-Cd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G8K-wc-bpt">

@@ -10,6 +10,7 @@
 		0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */; };
 		0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */; };
 		0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */; };
+		0525BC0223AD0EE5008EDDF2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BC0123AD0EE4008EDDF2 /* R.generated.swift */; };
 		05FCEDFF23A6BD6900C0BD10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */; };
 		05FCEE0123A6BD6900C0BD10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEE0023A6BD6900C0BD10 /* ViewController.swift */; };
 		05FCEE0423A6BD6900C0BD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FCEE0223A6BD6900C0BD10 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestinationViewController.swift; sourceTree = "<group>"; };
 		0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
+		0525BC0123AD0EE4008EDDF2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		05FCEDFB23A6BD6900C0BD10 /* RuziVoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuziVoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05FCEE0023A6BD6900C0BD10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		05FCEDFD23A6BD6900C0BD10 /* RuziVoy */ = {
 			isa = PBXGroup;
 			children = (
+				0525BC0123AD0EE4008EDDF2 /* R.generated.swift */,
 				0525BBF923ACFC02008EDDF2 /* data */,
 				0525BBF823ACFBF6008EDDF2 /* ui */,
 				05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */,
@@ -198,6 +201,7 @@
 			buildConfigurationList = 05FCEE2323A6BD6D00C0BD10 /* Build configuration list for PBXNativeTarget "RuziVoy" */;
 			buildPhases = (
 				F2CAC7F77A16963CC08ED383 /* [CP] Check Pods Manifest.lock */,
+				0525BC0023AD0E68008EDDF2 /* R */,
 				05FCEDF723A6BD6900C0BD10 /* Sources */,
 				05FCEDF823A6BD6900C0BD10 /* Frameworks */,
 				05FCEDF923A6BD6900C0BD10 /* Resources */,
@@ -324,6 +328,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0525BC0023AD0E68008EDDF2 /* R */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		0FFEFD2A67CE89C54E8A6110 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -470,6 +494,7 @@
 				05FCEDFF23A6BD6900C0BD10 /* AppDelegate.swift in Sources */,
 				0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */,
 				0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */,
+				0525BC0223AD0EE5008EDDF2 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44F96A82D7B5246BA95169B9 /* Pods-RuziVoy.debug.xcconfig */;
 			buildSettings = {
+				API_KEY = AIzaSyBNCBYtIRR2ft3ANWOV0z9q4j8s_hEtx6I;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UGS8SPKL8;
@@ -663,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1A7789F6F7F7819FF7CAECB /* Pods-RuziVoy.release.xcconfig */;
 			buildSettings = {
+				API_KEY = "AIzaSyDVvxYqsR_clvMlX9vnFaAVgfDdhNzrID8\n";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7UGS8SPKL8;

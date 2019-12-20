@@ -26,7 +26,7 @@ class OriginDestinationViewController: BaseViewController {
     }
     
     @objc func onOriginView() {
-        
+        performSegue(withIdentifier: R.segue.originDestinationViewController.originDestinationToSelectLocation, sender: self)
     }
     
     @objc func onDestinationView() {
