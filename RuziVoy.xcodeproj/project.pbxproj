@@ -11,6 +11,7 @@
 		0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */; };
 		0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */; };
 		0525BC0223AD0EE5008EDDF2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BC0123AD0EE4008EDDF2 /* R.generated.swift */; };
+		05966A9423B1370200A5F48E /* OriginDestinationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05966A9323B1370200A5F48E /* OriginDestinationViewModel.swift */; };
 		05FCEDFF23A6BD6900C0BD10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */; };
 		05FCEE0123A6BD6900C0BD10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEE0023A6BD6900C0BD10 /* ViewController.swift */; };
 		05FCEE0423A6BD6900C0BD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FCEE0223A6BD6900C0BD10 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		0525BC0123AD0EE4008EDDF2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		05966A9323B1370200A5F48E /* OriginDestinationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestinationViewModel.swift; sourceTree = "<group>"; };
 		05FCEDFB23A6BD6900C0BD10 /* RuziVoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuziVoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05FCEE0023A6BD6900C0BD10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 		0525BBF823ACFBF6008EDDF2 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */,
+				05966A9223B136DE00A5F48E /* originanddestination */,
 				0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */,
 				0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */,
 			);
@@ -112,6 +114,15 @@
 			children = (
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		05966A9223B136DE00A5F48E /* originanddestination */ = {
+			isa = PBXGroup;
+			children = (
+				0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */,
+				05966A9323B1370200A5F48E /* OriginDestinationViewModel.swift */,
+			);
+			path = originanddestination;
 			sourceTree = "<group>";
 		};
 		05FCEDF223A6BD6900C0BD10 = {
@@ -493,6 +504,7 @@
 				0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */,
 				05FCEDFF23A6BD6900C0BD10 /* AppDelegate.swift in Sources */,
 				0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */,
+				05966A9423B1370200A5F48E /* OriginDestinationViewModel.swift in Sources */,
 				0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */,
 				0525BC0223AD0EE5008EDDF2 /* R.generated.swift in Sources */,
 			);
