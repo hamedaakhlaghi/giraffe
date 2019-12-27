@@ -1,7 +1,6 @@
 import ObjectMapper
 import Foundation
 class Place: NSObject, Mappable {
-    
     var location: Location!
     var id: String!
     var placeId: String!
