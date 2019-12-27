@@ -3,4 +3,4 @@ xcuserdata
 *.DS_Store
 Pods/
 *.generated.swift
-Apikey.swift
+RuziVoy/Apikey.swift

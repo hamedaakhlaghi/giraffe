@@ -11,7 +11,18 @@
 		0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */; };
 		0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */; };
 		0525BC0223AD0EE5008EDDF2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BC0123AD0EE4008EDDF2 /* R.generated.swift */; };
+		0535FB5F23B6906A0008222A /* PlacesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB5E23B6906A0008222A /* PlacesResponse.swift */; };
+		0535FB6123B6917C0008222A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6023B6917C0008222A /* Place.swift */; };
+		0535FB6323B693540008222A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6223B693540008222A /* Location.swift */; };
+		0535FB6723B6967B0008222A /* RepositoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6623B6967B0008222A /* RepositoryResponse.swift */; };
+		0535FB6923B696AB0008222A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6823B696AB0008222A /* Repository.swift */; };
+		0535FB6B23B697F20008222A /* PlaceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6A23B697F20008222A /* PlaceRepositoryProtocol.swift */; };
+		0535FB6D23B698AA0008222A /* PlaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6C23B698AA0008222A /* PlaceRepository.swift */; };
+		0535FB6F23B6991A0008222A /* PlaceRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6E23B6991A0008222A /* PlaceRestRepository.swift */; };
+		0535FB7323B69B970008222A /* Apikey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB7223B69B970008222A /* Apikey.swift */; };
 		05966A9423B1370200A5F48E /* OriginDestinationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05966A9323B1370200A5F48E /* OriginDestinationViewModel.swift */; };
+		05966A9B23B1BEDD00A5F48E /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05966A9A23B1BEDD00A5F48E /* ApiHelper.swift */; };
+		05966A9D23B1BF9F00A5F48E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05966A9C23B1BF9F00A5F48E /* Interceptor.swift */; };
 		05FCEDFF23A6BD6900C0BD10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */; };
 		05FCEE0123A6BD6900C0BD10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FCEE0023A6BD6900C0BD10 /* ViewController.swift */; };
 		05FCEE0423A6BD6900C0BD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FCEE0223A6BD6900C0BD10 /* Main.storyboard */; };
@@ -48,7 +59,18 @@
 		0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		0525BC0123AD0EE4008EDDF2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		0535FB5E23B6906A0008222A /* PlacesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResponse.swift; sourceTree = "<group>"; };
+		0535FB6023B6917C0008222A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		0535FB6223B693540008222A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		0535FB6623B6967B0008222A /* RepositoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResponse.swift; sourceTree = "<group>"; };
+		0535FB6823B696AB0008222A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		0535FB6A23B697F20008222A /* PlaceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepositoryProtocol.swift; sourceTree = "<group>"; };
+		0535FB6C23B698AA0008222A /* PlaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepository.swift; sourceTree = "<group>"; };
+		0535FB6E23B6991A0008222A /* PlaceRestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRestRepository.swift; sourceTree = "<group>"; };
+		0535FB7223B69B970008222A /* Apikey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apikey.swift; sourceTree = SOURCE_ROOT; };
 		05966A9323B1370200A5F48E /* OriginDestinationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestinationViewModel.swift; sourceTree = "<group>"; };
+		05966A9A23B1BEDD00A5F48E /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		05966A9C23B1BF9F00A5F48E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		05FCEDFB23A6BD6900C0BD10 /* RuziVoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuziVoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FCEDFE23A6BD6900C0BD10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05FCEE0023A6BD6900C0BD10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,9 +124,9 @@
 		0525BBF823ACFBF6008EDDF2 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				05966A9623B1B5B000A5F48E /* selsectlocation */,
+				05966A9523B1B5A400A5F48E /* base */,
 				05966A9223B136DE00A5F48E /* originanddestination */,
-				0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */,
-				0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -112,8 +134,30 @@
 		0525BBF923ACFC02008EDDF2 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				05966A9923B1BE3800A5F48E /* repository */,
+				05966A9823B1BE2A00A5F48E /* remote */,
+				05966A9723B1BE1E00A5F48E /* models */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		0535FB6423B696030008222A /* place */ = {
+			isa = PBXGroup;
+			children = (
+				0535FB6A23B697F20008222A /* PlaceRepositoryProtocol.swift */,
+				0535FB6C23B698AA0008222A /* PlaceRepository.swift */,
+				0535FB6E23B6991A0008222A /* PlaceRestRepository.swift */,
+			);
+			path = place;
+			sourceTree = "<group>";
+		};
+		0535FB6523B6960E0008222A /* base */ = {
+			isa = PBXGroup;
+			children = (
+				0535FB6623B6967B0008222A /* RepositoryResponse.swift */,
+				0535FB6823B696AB0008222A /* Repository.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 		05966A9223B136DE00A5F48E /* originanddestination */ = {
@@ -123,6 +167,50 @@
 				05966A9323B1370200A5F48E /* OriginDestinationViewModel.swift */,
 			);
 			path = originanddestination;
+			sourceTree = "<group>";
+		};
+		05966A9523B1B5A400A5F48E /* base */ = {
+			isa = PBXGroup;
+			children = (
+				0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		05966A9623B1B5B000A5F48E /* selsectlocation */ = {
+			isa = PBXGroup;
+			children = (
+				0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */,
+			);
+			path = selsectlocation;
+			sourceTree = "<group>";
+		};
+		05966A9723B1BE1E00A5F48E /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0535FB5E23B6906A0008222A /* PlacesResponse.swift */,
+				0535FB6023B6917C0008222A /* Place.swift */,
+				0535FB6223B693540008222A /* Location.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		05966A9823B1BE2A00A5F48E /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				05966A9A23B1BEDD00A5F48E /* ApiHelper.swift */,
+				05966A9C23B1BF9F00A5F48E /* Interceptor.swift */,
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		05966A9923B1BE3800A5F48E /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				0535FB6523B6960E0008222A /* base */,
+				0535FB6423B696030008222A /* place */,
+			);
+			path = repository;
 			sourceTree = "<group>";
 		};
 		05FCEDF223A6BD6900C0BD10 = {
@@ -150,6 +238,7 @@
 		05FCEDFD23A6BD6900C0BD10 /* RuziVoy */ = {
 			isa = PBXGroup;
 			children = (
+				0535FB7223B69B970008222A /* Apikey.swift */,
 				0525BC0123AD0EE4008EDDF2 /* R.generated.swift */,
 				0525BBF923ACFC02008EDDF2 /* data */,
 				0525BBF823ACFBF6008EDDF2 /* ui */,
@@ -504,8 +593,19 @@
 				0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */,
 				05FCEDFF23A6BD6900C0BD10 /* AppDelegate.swift in Sources */,
 				0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */,
+				05966A9B23B1BEDD00A5F48E /* ApiHelper.swift in Sources */,
+				0535FB6723B6967B0008222A /* RepositoryResponse.swift in Sources */,
 				05966A9423B1370200A5F48E /* OriginDestinationViewModel.swift in Sources */,
+				0535FB6923B696AB0008222A /* Repository.swift in Sources */,
+				0535FB6F23B6991A0008222A /* PlaceRestRepository.swift in Sources */,
+				0535FB6B23B697F20008222A /* PlaceRepositoryProtocol.swift in Sources */,
+				0535FB7323B69B970008222A /* Apikey.swift in Sources */,
+				0535FB6D23B698AA0008222A /* PlaceRepository.swift in Sources */,
+				0535FB5F23B6906A0008222A /* PlacesResponse.swift in Sources */,
 				0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */,
+				05966A9D23B1BF9F00A5F48E /* Interceptor.swift in Sources */,
+				0535FB6123B6917C0008222A /* Place.swift in Sources */,
+				0535FB6323B693540008222A /* Location.swift in Sources */,
 				0525BC0223AD0EE5008EDDF2 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
