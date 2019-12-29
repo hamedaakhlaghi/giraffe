@@ -7,7 +7,7 @@ class PlaceRepository: PlaceRepositoryProtocl {
         placeRestRepository.getAll(onDone: onDone)
     }
 
-    func getAll(query: [URLQueryItem], onDone: ((RepositoryResponse<[PlacesResponse]>) -> ())?) {
+    func getAll(query: [URLQueryItem], onDone: ((RepositoryResponse<PlacesResponse>) -> ())?) {
         placeRestRepository.getAll(query: query, onDone: onDone)
         
     }

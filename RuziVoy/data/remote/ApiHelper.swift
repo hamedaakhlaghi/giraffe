@@ -23,12 +23,12 @@ class ApiHelper {
         alamofire.adapter = RequestInterceptor()
     }
     
-    public static func newUrlComponentsInstance(path: String) -> NSURLComponents {
+    public func newUrlComponentsInstance(path: String) -> NSURLComponents {
         let urlComponents = NSURLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "maps.googleapis.com"
-        
-        urlComponents.path = path
+        urlComponents.port = 443
+        urlComponents.path = "/"+path
         return urlComponents
     }
     

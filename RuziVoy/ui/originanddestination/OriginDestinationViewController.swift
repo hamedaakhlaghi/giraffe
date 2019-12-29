@@ -45,7 +45,9 @@ class OriginDestinationViewController: BaseViewController {
         performSegue(withIdentifier: R.segue.originDestinationViewController.originDestinationToSelectLocation, sender: LocationType.destination)
     }
     @IBAction func onDinner(_ sender: Any) {
-   
+        if viewModel.originLocation != nil {
+            performSegue(withIdentifier: R.segue.originDestinationViewController.planToPlaces, sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,12 +55,16 @@ class OriginDestinationViewController: BaseViewController {
             destination.set(delegate: self)
             destination.setLocation(type: sender as! LocationType)
         }
+        if let destination = R.segue.originDestinationViewController.planToPlaces(segue: segue)?.destination {
+            destination.setLocation(location: viewModel.originLocation)
+        }
     }
 }
 
 
 extension OriginDestinationViewController: SelectLocationDelegate{
     func selectedLocation(position: CLLocationCoordinate2D, type: LocationType) {
+        
         viewModel.getAddress(position: position, type: type)
     }
 }

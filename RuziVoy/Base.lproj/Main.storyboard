@@ -121,6 +121,7 @@
                         <outlet property="viewDestination" destination="CD5-da-oOL" id="w7f-0T-c8W"/>
                         <outlet property="viewOrigin" destination="TTV-4c-XFl" id="5rH-nB-Y6L"/>
                         <segue destination="uGl-H4-9Go" kind="show" identifier="originDestinationToSelectLocation" id="ol1-Cu-y9q"/>
+                        <segue destination="H4q-JU-kw9" kind="show" identifier="planToPlaces" id="7fF-yn-gp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,7 +163,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KJ-tg-Cd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="423"/>
+            <point key="canvasLocation" x="1936" y="117"/>
+        </scene>
+        <!--Places View Controller-->
+        <scene sceneID="BRm-4W-zkk">
+            <objects>
+                <viewController id="H4q-JU-kw9" customClass="PlacesViewController" customModule="RuziVoy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BWR-JU-5q3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="izt-tt-gag"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fx-jH-6bJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1935" y="780"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G8K-wc-bpt">
