@@ -9,6 +9,9 @@ PODS:
   - GoogleMaps/Base (3.6.0)
   - GoogleMaps/Maps (3.6.0):
     - GoogleMaps/Base
+  - GooglePlaces (3.6.0):
+    - GoogleMaps/Base (= 3.6.0)
+  - Kingfisher (4.10.1)
   - ObjectMapper (3.5.1)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
@@ -36,6 +39,8 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
   - GoogleMaps
+  - GooglePlaces
+  - Kingfisher
   - R.swift
   - RxDataSources
   - RxSwift
@@ -47,6 +52,8 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - Differentiator
     - GoogleMaps
+    - GooglePlaces
+    - Kingfisher
     - ObjectMapper
     - R.swift
     - R.swift.Library
@@ -61,6 +68,8 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   GoogleMaps: 82f8fe307193bb4de6ef6bf9e88f1d624b718f9d
+  GooglePlaces: 1b9d29cf3e164903d873600f511f42acdfe85294
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
@@ -70,6 +79,6 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   RxSwiftExt: 0d2fd77523a169d1459be34961b996a194bdef0e
 
-PODFILE CHECKSUM: 7fab37c0a2a8a1d257f36d179c0533fe3b2683e5
+PODFILE CHECKSUM: 9ecb1c446b3c6814a1dd7a6304430c89071987f3
 
 COCOAPODS: 1.8.4

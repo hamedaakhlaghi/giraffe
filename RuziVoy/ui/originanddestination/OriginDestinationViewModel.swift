@@ -1,6 +1,7 @@
 
 import Foundation
 import GoogleMaps
+import GooglePlaces
 import RxCocoa
 import RxSwift
 class OriginDestinationViewModel:  OriginDestination{
@@ -27,6 +28,8 @@ class OriginDestinationViewModel:  OriginDestination{
             }
         }
     }
+    
+    
 }
 
 

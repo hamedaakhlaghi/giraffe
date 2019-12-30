@@ -3,6 +3,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 import RxSwiftExt
+import GooglePlaces
 
 class PlacesViewModel {
     var placesResponse = PublishRelay<PlacesResponse>()
@@ -36,11 +37,13 @@ class PlacesViewModel {
             print(error)
         }
         let locQuery = URLQueryItem(name: "location", value: "\(location.lat),\(location.lng)")
-        let types = ["Cafe","Restaurant"]
+        let types = ["cafe","restaurant"]
         let typesQuery = URLQueryItem(name: "types", value: types.joined(separator: "|"))
         let keyQuery = URLQueryItem(name: "key", value: ApiKey.key)
         let radiusQuery = URLQueryItem(name: "radius", value: "1000")
         let queryItems: [URLQueryItem] = [locQuery, typesQuery, keyQuery, radiusQuery]
         placeRepository.getAll(query: queryItems, onDone: dataResponse)
     }
+
+   
 }

@@ -5,13 +5,14 @@ target 'RuziVoy' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
     pod 'GoogleMaps'
+    pod 'GooglePlaces'
     pod "RxSwift"
     pod "RxDataSources"
     pod "RxSwiftExt"
     pod "Alamofire"
     pod "AlamofireObjectMapper"
     pod "R.swift"
-
+    pod "Kingfisher"
   target 'RuziVoyTests' do
     inherit! :search_paths
     # Pods for testing
