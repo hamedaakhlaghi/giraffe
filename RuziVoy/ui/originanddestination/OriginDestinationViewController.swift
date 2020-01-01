@@ -3,6 +3,8 @@
 import UIKit
 import GoogleMaps
 import RxSwift
+import UserNotifications
+
 class OriginDestinationViewController: BaseViewController {
 
     @IBOutlet weak var buttonDinner: UIButton!
@@ -14,7 +16,7 @@ class OriginDestinationViewController: BaseViewController {
     var disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        notification()
     }
     
     override func initUIComponent() {
@@ -59,6 +61,59 @@ class OriginDestinationViewController: BaseViewController {
             destination.setLocation(location: viewModel.originLocation)
         }
     }
+    
+    func notification() {
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .sound];
+        center.requestAuthorization(options: options) { (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
+        
+        
+       
+        let content = UNMutableNotificationContent()
+        content.title = "Don't forget"
+        content.body = "Buy some milk"
+        content.sound = UNNotificationSound.default
+        let date1 = Date(timeIntervalSinceNow: 10)
+        let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date1)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+
+        let identifier = "UYLLocalNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        center.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                // Something went wrong
+            }
+        })
+        // Objective-C
+        
+        
+        
+//        let content = UNMutableNotificationContent()
+//        content.title = "Notification Demo"
+//        content.subtitle = "Demo"
+//        content.body = "Notification on specific date!!"
+//
+//        let request = UNNotificationRequest(
+//            identifier: "identifier",
+//            content: content,
+//            trigger: trigger
+//        )
+//
+//        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+//            if error != nil {
+//                //handle error
+//            } else {
+//                //notification set up successfully
+//            }
+//        })
+    }
+    
+    
 }
 
 
