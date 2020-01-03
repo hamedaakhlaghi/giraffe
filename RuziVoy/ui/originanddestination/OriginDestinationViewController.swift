@@ -6,20 +6,26 @@ import RxSwift
 import UserNotifications
 
 class OriginDestinationViewController: BaseViewController {
-
+    
+    @IBOutlet weak var textFieldTime: UITextField!
     @IBOutlet weak var buttonDinner: UIButton!
     @IBOutlet weak var labelAt: UILabel!
     @IBOutlet weak var labelFrom: UILabel!
     @IBOutlet weak var viewDestination: UIView!
     @IBOutlet weak var viewOrigin: UIView!
+    
     var viewModel = OriginDestinationViewModel()
     var disposeBag = DisposeBag()
+    let datePicker = UIDatePicker()
+    var selectedPlace: Place!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        notification()
     }
     
     override func initUIComponent() {
+        showDatePicker()
+        textFieldTime.layer.cornerRadius = 5
         viewOrigin.layer.cornerRadius = 5
         viewDestination.layer.cornerRadius = 5
         buttonDinner.layer.cornerRadius = 5
@@ -28,7 +34,9 @@ class OriginDestinationViewController: BaseViewController {
         
         let destinationGesture = UITapGestureRecognizer(target: self, action: #selector(onDestinationView))
         viewDestination.addGestureRecognizer(destinationGesture)
+        textFieldTime.isHidden = true
     }
+    
     
     override func bindViewModel() {
         viewModel.originAddress.subscribe(onNext: { [weak self] address in
@@ -59,61 +67,40 @@ class OriginDestinationViewController: BaseViewController {
         }
         if let destination = R.segue.originDestinationViewController.planToPlaces(segue: segue)?.destination {
             destination.setLocation(location: viewModel.originLocation)
+            destination.placesDelegate = self
         }
     }
     
-    func notification() {
-        let center = UNUserNotificationCenter.current()
-        let options: UNAuthorizationOptions = [.alert, .sound];
-        center.requestAuthorization(options: options) { (granted, error) in
-            if !granted {
-                print("Something went wrong")
-            }
-        }
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .dateAndTime
         
+        //ToolBar
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
         
-       
-        let content = UNMutableNotificationContent()
-        content.title = "Don't forget"
-        content.body = "Buy some milk"
-        content.sound = UNNotificationSound.default
-        let date1 = Date(timeIntervalSinceNow: 10)
-        let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date1)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-
-        let identifier = "UYLLocalNotification"
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
         
-        center.add(request, withCompletionHandler: { (error) in
-            if let error = error {
-                // Something went wrong
-            }
-        })
-        // Objective-C
+        textFieldTime.inputAccessoryView = toolbar
+        textFieldTime.inputView = datePicker
         
-        
-        
-//        let content = UNMutableNotificationContent()
-//        content.title = "Notification Demo"
-//        content.subtitle = "Demo"
-//        content.body = "Notification on specific date!!"
-//
-//        let request = UNNotificationRequest(
-//            identifier: "identifier",
-//            content: content,
-//            trigger: trigger
-//        )
-//
-//        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
-//            if error != nil {
-//                //handle error
-//            } else {
-//                //notification set up successfully
-//            }
-//        })
     }
     
+    @objc func donedatePicker(){
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM hh:mm a"
+        textFieldTime.text = formatter.string(from: datePicker.date)
+        viewModel.setNotification(place: selectedPlace, date: datePicker.date)
+        self.view.endEditing(true)
+    }
     
+    @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+    }
 }
 
 
@@ -121,6 +108,13 @@ extension OriginDestinationViewController: SelectLocationDelegate{
     func selectedLocation(position: CLLocationCoordinate2D, type: LocationType) {
         
         viewModel.getAddress(position: position, type: type)
+    }
+}
+
+extension OriginDestinationViewController: PlacesDelegate {
+    func selected(place: Place) {
+        self.selectedPlace = place
+        textFieldTime.isHidden = false
     }
 }
 enum LocationType {

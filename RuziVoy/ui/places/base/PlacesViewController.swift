@@ -6,6 +6,8 @@ class PlacesViewController: BaseViewController {
     var location: Location!
     var disposeBag: DisposeBag?
     var places = [Place]()
+    weak var placesDelegate: PlacesDelegate?
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,4 +53,13 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        placesDelegate!.selected(place: self.places[indexPath.row])
+        self.navigationController?.popViewController(animated: false)
+    }
+}
+
+protocol PlacesDelegate: class {
+    func selected(place: Place)
 }

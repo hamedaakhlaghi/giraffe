@@ -4,6 +4,7 @@ import GoogleMaps
 import GooglePlaces
 import RxCocoa
 import RxSwift
+import UserNotifications
 class OriginDestinationViewModel:  OriginDestination{
     var destinationAddress = BehaviorRelay<String>(value: "At")
     var originAddress = BehaviorRelay<String>(value: "From")
@@ -29,6 +30,33 @@ class OriginDestinationViewModel:  OriginDestination{
         }
     }
     
+    
+    func setNotification(place: Place, date: Date) {
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .sound];
+        center.requestAuthorization(options: options) { (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = place.name
+        content.body = "go to \(place.name!) ad \(date)"
+        content.sound = UNNotificationSound.default
+        let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+        
+        let identifier = "UYLLocalNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        center.add(request, withCompletionHandler: { (error) in
+            if let error = error {
+                // Something went wrong
+            }
+        })
+        
+    }
     
 }
 

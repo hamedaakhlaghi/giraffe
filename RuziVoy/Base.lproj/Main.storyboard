@@ -69,7 +69,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTV-4c-XFl">
                                 <rect key="frame" x="10" y="163.5" width="196" height="134.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xen-1j-goS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Leave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xen-1j-goS">
                                         <rect key="frame" x="10" y="10" width="50" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23" id="TB7-7I-Xpf"/>
@@ -84,15 +84,26 @@
                                         <color key="textColor" red="1" green="0.34531902845429741" blue="0.13767220139648872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SET TIME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yY7-t5-LRx">
+                                        <rect key="frame" x="65" y="10" width="126" height="23"/>
+                                        <color key="backgroundColor" red="1" green="0.66158556719999995" blue="0.14466675339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.45994755993150682" green="0.87925406678082196" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="JEQ-Jh-60U" firstAttribute="leading" secondItem="TTV-4c-XFl" secondAttribute="leading" constant="5" id="1Vb-WZ-17G"/>
+                                    <constraint firstItem="yY7-t5-LRx" firstAttribute="leading" secondItem="xen-1j-goS" secondAttribute="trailing" constant="5" id="CpZ-q6-EV0"/>
+                                    <constraint firstItem="yY7-t5-LRx" firstAttribute="height" secondItem="xen-1j-goS" secondAttribute="height" id="GcV-hP-hQY"/>
                                     <constraint firstAttribute="trailing" secondItem="JEQ-Jh-60U" secondAttribute="trailing" constant="5" id="O4D-lq-Xvh"/>
                                     <constraint firstItem="xen-1j-goS" firstAttribute="leading" secondItem="TTV-4c-XFl" secondAttribute="leading" constant="10" id="Okj-qe-Zdm"/>
                                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="JEQ-Jh-60U" secondAttribute="bottom" constant="5" id="b0Z-uH-Ahi"/>
                                     <constraint firstItem="xen-1j-goS" firstAttribute="top" secondItem="TTV-4c-XFl" secondAttribute="top" constant="10" id="c4E-e3-e0U"/>
                                     <constraint firstItem="JEQ-Jh-60U" firstAttribute="top" secondItem="xen-1j-goS" secondAttribute="bottom" constant="5" id="jba-hg-rom"/>
+                                    <constraint firstItem="yY7-t5-LRx" firstAttribute="centerY" secondItem="xen-1j-goS" secondAttribute="centerY" id="l4u-Qd-DUb"/>
+                                    <constraint firstAttribute="trailing" secondItem="yY7-t5-LRx" secondAttribute="trailing" constant="5" id="l5E-za-Hxt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -118,6 +129,7 @@
                         <outlet property="buttonDinner" destination="j9x-q2-gdL" id="Yck-Mw-J6P"/>
                         <outlet property="labelAt" destination="ATC-W5-Z2v" id="mFS-Ks-YaF"/>
                         <outlet property="labelFrom" destination="JEQ-Jh-60U" id="bfo-A7-bcO"/>
+                        <outlet property="textFieldTime" destination="yY7-t5-LRx" id="aBn-OY-6dO"/>
                         <outlet property="viewDestination" destination="CD5-da-oOL" id="w7f-0T-c8W"/>
                         <outlet property="viewOrigin" destination="TTV-4c-XFl" id="5rH-nB-Y6L"/>
                         <segue destination="uGl-H4-9Go" kind="show" identifier="originDestinationToSelectLocation" id="ol1-Cu-y9q"/>
