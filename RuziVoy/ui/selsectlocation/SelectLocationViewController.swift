@@ -67,7 +67,7 @@ extension SelectLocationViewController: GMSMapViewDelegate {
     
     private func plotMarker(AtCoordinate coordinate : CLLocationCoordinate2D, onMapView vwMap : GMSMapView) {
         let marker = GMSMarker(position: coordinate)
-        
+    
         removeMarkers(mapView: vwMap)
         markers.append(marker)
         marker.map = vwMap

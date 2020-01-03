@@ -3,7 +3,8 @@ import RxCocoa
 import RxSwift
 class PlacesViewController: BaseViewController {
     var viewModel = PlacesViewModel()
-    var location: Location!
+    var originLocation: Location!
+    var destinationLocation: Location!
     var disposeBag: DisposeBag?
     var places = [Place]()
     weak var placesDelegate: PlacesDelegate?
@@ -14,8 +15,9 @@ class PlacesViewController: BaseViewController {
 
     }
     
-    func setLocation(location: Location) {
-        self.location = location
+    func set(origin: Location, destination: Location) {
+        self.originLocation = origin
+        self.destinationLocation = destination
     }
     
     override func initUIComponent() {
@@ -29,8 +31,14 @@ class PlacesViewController: BaseViewController {
             self?.places = places
             self?.tableView.reloadData()
         }).disposed(by: disposeBag!)
-        viewModel.getPlaces(location: location)
+        viewModel.getPlaces(location: originLocation)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = R.segue.placesViewController.placesToShowAll(segue: segue)?.destination {
+            destination.setData(place: sender as! Place, origin: originLocation, destination: destinationLocation)
+        }
     }
 }
 
@@ -55,11 +63,10 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        placesDelegate!.selected(place: self.places[indexPath.row])
-        self.navigationController?.popViewController(animated: false)
+        self.performSegue(withIdentifier: R.segue.placesViewController.placesToShowAll, sender: self.places[indexPath.row])
     }
 }
 
 protocol PlacesDelegate: class {
-    func selected(place: Place)
+    func selected(place: Place, origin: Location, destination: Location)
 }

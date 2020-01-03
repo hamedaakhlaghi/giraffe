@@ -13,7 +13,7 @@ class OriginDestinationViewController: BaseViewController {
     @IBOutlet weak var labelFrom: UILabel!
     @IBOutlet weak var viewDestination: UIView!
     @IBOutlet weak var viewOrigin: UIView!
-    
+    var date: Date!
     var viewModel = OriginDestinationViewModel()
     var disposeBag = DisposeBag()
     let datePicker = UIDatePicker()
@@ -34,7 +34,6 @@ class OriginDestinationViewController: BaseViewController {
         
         let destinationGesture = UITapGestureRecognizer(target: self, action: #selector(onDestinationView))
         viewDestination.addGestureRecognizer(destinationGesture)
-        textFieldTime.isHidden = true
     }
     
     
@@ -55,7 +54,7 @@ class OriginDestinationViewController: BaseViewController {
         performSegue(withIdentifier: R.segue.originDestinationViewController.originDestinationToSelectLocation, sender: LocationType.destination)
     }
     @IBAction func onDinner(_ sender: Any) {
-        if viewModel.originLocation != nil {
+        if viewModel.originLocation != nil, viewModel.destinationLocation != nil {
             performSegue(withIdentifier: R.segue.originDestinationViewController.planToPlaces, sender: self)
         }
     }
@@ -66,8 +65,7 @@ class OriginDestinationViewController: BaseViewController {
             destination.setLocation(type: sender as! LocationType)
         }
         if let destination = R.segue.originDestinationViewController.planToPlaces(segue: segue)?.destination {
-            destination.setLocation(location: viewModel.originLocation)
-            destination.placesDelegate = self
+            destination.set(origin: viewModel.originLocation, destination: viewModel.destinationLocation)
         }
     }
     
@@ -94,7 +92,7 @@ class OriginDestinationViewController: BaseViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM hh:mm a"
         textFieldTime.text = formatter.string(from: datePicker.date)
-        viewModel.setNotification(place: selectedPlace, date: datePicker.date)
+        date = datePicker.date
         self.view.endEditing(true)
     }
     
@@ -111,12 +109,12 @@ extension OriginDestinationViewController: SelectLocationDelegate{
     }
 }
 
-extension OriginDestinationViewController: PlacesDelegate {
-    func selected(place: Place) {
-        self.selectedPlace = place
-        textFieldTime.isHidden = false
-    }
-}
+//extension OriginDestinationViewController: PlacesDelegate {
+//    func selected(place: Place) {
+//        self.selectedPlace = place
+//        textFieldTime.isHidden = false
+//    }
+//}
 enum LocationType {
     case origin
     case destination
