@@ -52,10 +52,11 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.placeTableViewCell, for: indexPath)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.placeTableViewCell, for: indexPath)!
         let place = places[indexPath.row]
         cell.set(place: place)
-        return UITableViewCell()
+        cell.selectionStyle = .none
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -64,6 +65,8 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: R.segue.placesViewController.placesToShowAll, sender: self.places[indexPath.row])
+        let cell = tableView.cellForRow(at: indexPath) as! PlaceTableViewCell
+        cell.isHighlighted = false
     }
 }
 

@@ -10,13 +10,14 @@ import UIKit
 import GooglePlaces
 import Kingfisher
 class PlaceTableViewCell: UITableViewCell {
-
+    @IBOutlet var images: [UIImageView]!
+    
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var labelRank: UILabel!
     @IBOutlet weak var labelName: UILabel!
-    @IBOutlet weak var imagePlace: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .blue
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,10 +30,15 @@ class PlaceTableViewCell: UITableViewCell {
         labelRank.text = "\(place.rating)"
         labelPrice.text = "\(place.priceLevel)"
         if let photos = place.photos {
-            let reference = photos[0].photoReference
-            let urlString = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=\(reference!)&key=\(ApiKey.key)"
-            let url = URL(string: urlString)
-            imagePlace.kf.setImage(with: url)
+            for i in 0..<photos.count {
+                let reference = photos[i].photoReference
+                let urlString = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=\(reference!)&key=\(ApiKey.key)"
+                let url = URL(string: urlString)
+                if i < 3 {
+                    images[i].kf.setImage(with: url)
+                }
+                
+            }
         }
     }
 }

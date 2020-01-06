@@ -26,6 +26,7 @@
 		054548E023BA6EEA002DA97C /* PlacePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054548DF23BA6EEA002DA97C /* PlacePhoto.swift */; };
 		055B12F923BF535C00EC0661 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B12F823BF535C00EC0661 /* LocationsViewController.swift */; };
 		055B12FC23BF538000EC0661 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B12FB23BF538000EC0661 /* LocationsViewModel.swift */; };
+		056CCB5423C3D4DC00D78EAD /* PlacesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 054548DB23B9396A002DA97C /* PlacesResponse.json */; };
 		05966A9423B1370200A5F48E /* OriginDestinationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05966A9323B1370200A5F48E /* OriginDestinationViewModel.swift */; };
 		05966A9B23B1BEDD00A5F48E /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05966A9A23B1BEDD00A5F48E /* ApiHelper.swift */; };
 		05966A9D23B1BF9F00A5F48E /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05966A9C23B1BF9F00A5F48E /* Interceptor.swift */; };
@@ -459,6 +460,7 @@
 			files = (
 				05FCEE0923A6BD6D00C0BD10 /* LaunchScreen.storyboard in Resources */,
 				05FCEE0623A6BD6D00C0BD10 /* Assets.xcassets in Resources */,
+				056CCB5423C3D4DC00D78EAD /* PlacesResponse.json in Resources */,
 				05FCEE0423A6BD6900C0BD10 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
