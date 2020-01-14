@@ -20,6 +20,7 @@ class SelectLocationViewController: UIViewController {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         viewMap.delegate = self
+        navigationItem.rightBarButtonItem?.isEnabled = false
         // Do any additional setup after loading the view.
     }
     
@@ -72,6 +73,7 @@ extension SelectLocationViewController: GMSMapViewDelegate {
         markers.append(marker)
         marker.map = vwMap
         position = coordinate
+        navigationItem.rightBarButtonItem?.isEnabled = true
     }
     
     func removeMarkers(mapView: GMSMapView){

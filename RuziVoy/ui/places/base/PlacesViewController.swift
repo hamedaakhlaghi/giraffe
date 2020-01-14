@@ -7,6 +7,7 @@ class PlacesViewController: BaseViewController {
     var destinationLocation: Location!
     var disposeBag: DisposeBag?
     var places = [Place]()
+    var date: Date!
     weak var placesDelegate: PlacesDelegate?
     
     @IBOutlet weak var tableView: UITableView!
@@ -15,9 +16,10 @@ class PlacesViewController: BaseViewController {
 
     }
     
-    func set(origin: Location, destination: Location) {
+    func set(origin: Location, destination: Location, date: Date) {
         self.originLocation = origin
         self.destinationLocation = destination
+        self.date = date
     }
     
     override func initUIComponent() {
@@ -37,7 +39,7 @@ class PlacesViewController: BaseViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = R.segue.placesViewController.placesToShowAll(segue: segue)?.destination {
-            destination.setData(place: sender as! Place, origin: originLocation, destination: destinationLocation)
+            destination.setData(place: sender as! Place, origin: originLocation, destination: destinationLocation, date: date)
         }
     }
 }

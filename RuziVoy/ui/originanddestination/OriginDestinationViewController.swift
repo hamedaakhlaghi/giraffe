@@ -29,6 +29,8 @@ class OriginDestinationViewController: BaseViewController {
         viewOrigin.layer.cornerRadius = 5
         viewDestination.layer.cornerRadius = 5
         buttonDinner.layer.cornerRadius = 5
+        buttonDinner.isEnabled = false
+        buttonDinner.backgroundColor = .gray
         let originGesture = UITapGestureRecognizer(target: self, action: #selector(onOriginView))
         viewOrigin.addGestureRecognizer(originGesture)
         
@@ -44,6 +46,11 @@ class OriginDestinationViewController: BaseViewController {
         
         viewModel.destinationAddress.subscribe(onNext:{[weak self] address in
             self?.labelAt.text = address
+        }).disposed(by: disposeBag)
+        
+        viewModel.isDinnerActive.subscribe(onNext: {[weak self] isEnabled in
+            self?.buttonDinner.isEnabled = isEnabled
+            self?.buttonDinner.backgroundColor = isEnabled ? .orange : .gray
         }).disposed(by: disposeBag)
     }
     @objc func onOriginView() {
@@ -65,7 +72,8 @@ class OriginDestinationViewController: BaseViewController {
             destination.setLocation(type: sender as! LocationType)
         }
         if let destination = R.segue.originDestinationViewController.planToPlaces(segue: segue)?.destination {
-            destination.set(origin: viewModel.originLocation, destination: viewModel.destinationLocation)
+            
+            destination.set(origin: viewModel.originLocation, destination: viewModel.destinationLocation, date: date)
         }
     }
     
@@ -93,6 +101,7 @@ class OriginDestinationViewController: BaseViewController {
         formatter.dateFormat = "dd/MM hh:mm a"
         textFieldTime.text = formatter.string(from: datePicker.date)
         date = datePicker.date
+        viewModel.date.accept(date)
         self.view.endEditing(true)
     }
     

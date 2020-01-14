@@ -19,8 +19,10 @@ class LocationsViewController: BaseViewController {
 
     }
     
-    func setData(place: Place, origin: Location, destination: Location) {
+    func setData(place: Place, origin: Location, destination: Location, date: Date) {
         viewModel = LocationsViewModel(place: place, origin: origin, destination: destination)
+        viewModel.setNotification(place: place, date: date)
+        
     }
     
     override func initUIComponent() {

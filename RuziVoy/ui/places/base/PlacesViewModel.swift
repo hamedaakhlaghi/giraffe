@@ -19,34 +19,36 @@ class PlacesViewModel {
     }
     
     func getPlaces(location: Location) {
+        #if DEBUG
         let places = Mapper<PlacesResponse>().map(JSONfile: "PlacesResponse.json")!
         placesResponse.accept(places)
-        
-//        let placeRepository = PlaceRepository()
-//        let dataResponse: ((RepositoryResponse<PlacesResponse>)->())? = { [weak self] repoResponse in
-//            guard let  error = repoResponse.error else {
-//                let statusCode = repoResponse.restDataResponse?.response?.statusCode
-//                switch statusCode {
-//                case 200:
-//                    if let placesResponse = repoResponse.restDataResponse?.result.value {
-//                    self?.placesResponse.accept(placesResponse)
-//                    
-//                    }
-//                    print("response problem")
-//                default:
-//                    print("problem")
-//                }
-//                return
-//            }
-//            print(error)
-//        }
-//        let locQuery = URLQueryItem(name: "location", value: "\(location.lat),\(location.lng)")
-//        let types = ["cafe","restaurant"]
-//        let typesQuery = URLQueryItem(name: "types", value: types.joined(separator: "|"))
-//        let keyQuery = URLQueryItem(name: "key", value: ApiKey.key)
-//        let radiusQuery = URLQueryItem(name: "radius", value: "1000")
-//        let queryItems: [URLQueryItem] = [locQuery, typesQuery, keyQuery, radiusQuery]
-//        placeRepository.getAll(query: queryItems, onDone: dataResponse)
+        #else
+        let placeRepository = PlaceRepository()
+        let dataResponse: ((RepositoryResponse<PlacesResponse>)->())? = { [weak self] repoResponse in
+            guard let  error = repoResponse.error else {
+                let statusCode = repoResponse.restDataResponse?.response?.statusCode
+                switch statusCode {
+                case 200:
+                    if let placesResponse = repoResponse.restDataResponse?.result.value {
+                        self?.placesResponse.accept(placesResponse)
+                        
+                    }
+                    print("response problem")
+                default:
+                    print("problem")
+                }
+                return
+            }
+            print(error)
+        }
+        let locQuery = URLQueryItem(name: "location", value: "\(location.lat),\(location.lng)")
+        let types = ["cafe","restaurant"]
+        let typesQuery = URLQueryItem(name: "types", value: types.joined(separator: "|"))
+        let keyQuery = URLQueryItem(name: "key", value: ApiKey.key)
+        let radiusQuery = URLQueryItem(name: "radius", value: "1000")
+        let queryItems: [URLQueryItem] = [locQuery, typesQuery, keyQuery, radiusQuery]
+        placeRepository.getAll(query: queryItems, onDone: dataResponse)
+        #endif
     }
 
    

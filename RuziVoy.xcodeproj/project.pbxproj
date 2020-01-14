@@ -82,6 +82,7 @@
 		054548DF23BA6EEA002DA97C /* PlacePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePhoto.swift; sourceTree = "<group>"; };
 		055B12F823BF535C00EC0661 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		055B12FB23BF538000EC0661 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		057A374023CE495100BB4DB3 /* RuziVoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuziVoy.entitlements; sourceTree = "<group>"; };
 		05966A9323B1370200A5F48E /* OriginDestinationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestinationViewModel.swift; sourceTree = "<group>"; };
 		05966A9A23B1BEDD00A5F48E /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		05966A9C23B1BF9F00A5F48E /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
@@ -290,6 +291,7 @@
 		05FCEDFD23A6BD6900C0BD10 /* RuziVoy */ = {
 			isa = PBXGroup;
 			children = (
+				057A374023CE495100BB4DB3 /* RuziVoy.entitlements */,
 				0535FB7223B69B970008222A /* Apikey.swift */,
 				0525BC0123AD0EE4008EDDF2 /* R.generated.swift */,
 				0525BBF923ACFC02008EDDF2 /* data */,
@@ -422,6 +424,11 @@
 				TargetAttributes = {
 					05FCEDFA23A6BD6900C0BD10 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					05FCEE0E23A6BD6D00C0BD10 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -843,14 +850,15 @@
 			buildSettings = {
 				API_KEY = AIzaSyBNCBYtIRR2ft3ANWOV0z9q4j8s_hEtx6I;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RuziVoy/RuziVoy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7UGS8SPKL8;
+				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = RuziVoy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shsa.RuziVoy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shsa.RuziVoy.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -861,16 +869,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1A7789F6F7F7819FF7CAECB /* Pods-RuziVoy.release.xcconfig */;
 			buildSettings = {
-				API_KEY = "AIzaSyDVvxYqsR_clvMlX9vnFaAVgfDdhNzrID8\n";
+				API_KEY = AIzaSyBNCBYtIRR2ft3ANWOV0z9q4j8s_hEtx6I;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RuziVoy/RuziVoy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7UGS8SPKL8;
+				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = RuziVoy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shsa.RuziVoy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shsa.RuziVoy.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
