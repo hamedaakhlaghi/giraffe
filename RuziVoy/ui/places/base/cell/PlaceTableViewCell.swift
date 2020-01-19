@@ -30,14 +30,11 @@ class PlaceTableViewCell: UITableViewCell {
         labelRank.text = "\(place.rating)"
         labelPrice.text = "\(place.priceLevel)"
         if let photos = place.photos {
-            for i in 0..<photos.count {
+            for i in 0..<min(photos.count,3) {
                 let reference = photos[i].photoReference
                 let urlString = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=\(reference!)&key=\(ApiKey.key)"
                 let url = URL(string: urlString)
-                if i < 3 {
-                    images[i].kf.setImage(with: url)
-                }
-                
+                images[i].kf.setImage(with: url)
             }
         }
     }

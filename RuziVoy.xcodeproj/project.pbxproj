@@ -851,7 +851,8 @@
 				API_KEY = AIzaSyBNCBYtIRR2ft3ANWOV0z9q4j8s_hEtx6I;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RuziVoy/RuziVoy.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = RuziVoy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -860,6 +861,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shsa.RuziVoy.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = RuziTest;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -872,7 +874,8 @@
 				API_KEY = AIzaSyBNCBYtIRR2ft3ANWOV0z9q4j8s_hEtx6I;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = RuziVoy/RuziVoy.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = E8R89PF79F;
 				INFOPLIST_FILE = RuziVoy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -881,6 +884,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shsa.RuziVoy.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = RuziTest;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
