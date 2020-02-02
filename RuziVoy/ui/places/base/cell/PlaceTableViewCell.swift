@@ -29,6 +29,8 @@ class PlaceTableViewCell: UITableViewCell {
         labelName.text = place.name
         labelRank.text = "\(place.rating)"
         labelPrice.text = "\(place.priceLevel)"
+        #if DEBUG
+        #else
         if let photos = place.photos {
             for i in 0..<min(photos.count,3) {
                 let reference = photos[i].photoReference
@@ -37,5 +39,6 @@ class PlaceTableViewCell: UITableViewCell {
                 images[i].kf.setImage(with: url)
             }
         }
+        #endif
     }
 }

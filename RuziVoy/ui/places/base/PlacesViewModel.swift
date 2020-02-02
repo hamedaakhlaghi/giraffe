@@ -42,7 +42,7 @@ class PlacesViewModel {
             print(error)
         }
         let locQuery = URLQueryItem(name: "location", value: "\(location.lat),\(location.lng)")
-        let types = ["cafe","restaurant"]
+        let types = ["restaurant"]
         let typesQuery = URLQueryItem(name: "types", value: types.joined(separator: "|"))
         let keyQuery = URLQueryItem(name: "key", value: ApiKey.key)
         let radiusQuery = URLQueryItem(name: "radius", value: "1000")
