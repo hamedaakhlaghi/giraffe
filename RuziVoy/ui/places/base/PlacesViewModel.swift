@@ -31,7 +31,6 @@ class PlacesViewModel {
                 case 200:
                     if let placesResponse = repoResponse.restDataResponse?.result.value {
                         self?.placesResponse.accept(placesResponse)
-                        
                     }
                     print("response problem")
                 default:

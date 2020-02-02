@@ -11,8 +11,8 @@ class OriginDestinationViewModel:  OriginDestination{
     var date = BehaviorRelay<Date?>(value: nil)
     var destinationLocation: Location!
     var isDinnerActive: Observable<Bool> {
-        return date.asObservable().map {[weak self]date in
-            if let date = date, self?.originLocation != nil, self?.destinationLocation != nil {
+        return Observable.combineLatest(date.asObservable(), originAddress.asObservable(), destinationAddress.asObservable()).map {[weak self]date, origin, destination in
+            if let _ = date, self?.originLocation != nil, self?.destinationLocation != nil {
                 return true
             } else {
                 return false
