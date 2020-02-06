@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050F458E23E743AA00437D01 /* PlacesResultsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F458D23E743AA00437D01 /* PlacesResultsTableController.swift */; };
 		0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */; };
 		0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */; };
 		0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */; };
@@ -62,6 +63,7 @@
 /* Begin PBXFileReference section */
 		016B5A37D27A494608BF6035 /* Pods-RuziVoy-RuziVoyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoy-RuziVoyUITests.debug.xcconfig"; path = "Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		03E49AA41E9AB3884BF88E24 /* Pods-RuziVoyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoyTests.release.xcconfig"; path = "Target Support Files/Pods-RuziVoyTests/Pods-RuziVoyTests.release.xcconfig"; sourceTree = "<group>"; };
+		050F458D23E743AA00437D01 /* PlacesResultsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResultsTableController.swift; sourceTree = "<group>"; };
 		0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestinationViewController.swift; sourceTree = "<group>"; };
 		0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */,
+				050F458D23E743AA00437D01 /* PlacesResultsTableController.swift */,
 			);
 			path = selsectlocation;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				054548D823B9138E002DA97C /* PlacesViewController.swift in Sources */,
 				05966A9D23B1BF9F00A5F48E /* Interceptor.swift in Sources */,
 				055B12FC23BF538000EC0661 /* LocationsViewModel.swift in Sources */,
+				050F458E23E743AA00437D01 /* PlacesResultsTableController.swift in Sources */,
 				054548DE23BA66E3002DA97C /* PlaceTableViewCell.swift in Sources */,
 				0535FB6123B6917C0008222A /* Place.swift in Sources */,
 				0535FB6323B693540008222A /* Location.swift in Sources */,
