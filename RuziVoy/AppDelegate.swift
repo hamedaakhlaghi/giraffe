@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let googleApiKey = Bundle.main.infoDictionary!["API_KEY"] as! String
         GMSServices.provideAPIKey(ApiKey.key)
+        GMSPlacesClient.provideAPIKey(ApiKey.key)
         UNUserNotificationCenter.current().delegate = self
         return true
     }

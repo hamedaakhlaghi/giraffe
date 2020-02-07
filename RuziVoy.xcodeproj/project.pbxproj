@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		050F458E23E743AA00437D01 /* PlacesResultsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F458D23E743AA00437D01 /* PlacesResultsTableController.swift */; };
+		050F459023ED37AB00437D01 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050F458F23ED37AB00437D01 /* ApiKey.swift */; };
 		0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */; };
 		0525BBFD23AD0466008EDDF2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */; };
 		0525BBFF23AD0C0F008EDDF2 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */; };
@@ -20,7 +21,6 @@
 		0535FB6B23B697F20008222A /* PlaceRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6A23B697F20008222A /* PlaceRepositoryProtocol.swift */; };
 		0535FB6D23B698AA0008222A /* PlaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6C23B698AA0008222A /* PlaceRepository.swift */; };
 		0535FB6F23B6991A0008222A /* PlaceRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB6E23B6991A0008222A /* PlaceRestRepository.swift */; };
-		0535FB7323B69B970008222A /* Apikey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535FB7223B69B970008222A /* Apikey.swift */; };
 		054548D823B9138E002DA97C /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054548D723B9138E002DA97C /* PlacesViewController.swift */; };
 		054548DA23B913A4002DA97C /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054548D923B913A4002DA97C /* PlacesViewModel.swift */; };
 		054548DE23BA66E3002DA97C /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054548DD23BA66E3002DA97C /* PlaceTableViewCell.swift */; };
@@ -64,6 +64,7 @@
 		016B5A37D27A494608BF6035 /* Pods-RuziVoy-RuziVoyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoy-RuziVoyUITests.debug.xcconfig"; path = "Target Support Files/Pods-RuziVoy-RuziVoyUITests/Pods-RuziVoy-RuziVoyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		03E49AA41E9AB3884BF88E24 /* Pods-RuziVoyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuziVoyTests.release.xcconfig"; path = "Target Support Files/Pods-RuziVoyTests/Pods-RuziVoyTests.release.xcconfig"; sourceTree = "<group>"; };
 		050F458D23E743AA00437D01 /* PlacesResultsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResultsTableController.swift; sourceTree = "<group>"; };
+		050F458F23ED37AB00437D01 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		0525BBFA23ACFC4A008EDDF2 /* OriginDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginDestinationViewController.swift; sourceTree = "<group>"; };
 		0525BBFC23AD0466008EDDF2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0525BBFE23AD0C0F008EDDF2 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		0535FB6A23B697F20008222A /* PlaceRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepositoryProtocol.swift; sourceTree = "<group>"; };
 		0535FB6C23B698AA0008222A /* PlaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepository.swift; sourceTree = "<group>"; };
 		0535FB6E23B6991A0008222A /* PlaceRestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRestRepository.swift; sourceTree = "<group>"; };
-		0535FB7223B69B970008222A /* Apikey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apikey.swift; sourceTree = SOURCE_ROOT; };
 		054548D723B9138E002DA97C /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		054548D923B913A4002DA97C /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		054548DB23B9396A002DA97C /* PlacesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlacesResponse.json; sourceTree = "<group>"; };
@@ -295,7 +295,6 @@
 			isa = PBXGroup;
 			children = (
 				057A374023CE495100BB4DB3 /* RuziVoy.entitlements */,
-				0535FB7223B69B970008222A /* Apikey.swift */,
 				0525BC0123AD0EE4008EDDF2 /* R.generated.swift */,
 				0525BBF923ACFC02008EDDF2 /* data */,
 				0525BBF823ACFBF6008EDDF2 /* ui */,
@@ -306,6 +305,7 @@
 				05FCEE0723A6BD6D00C0BD10 /* LaunchScreen.storyboard */,
 				05FCEE0A23A6BD6D00C0BD10 /* Info.plist */,
 				054548DB23B9396A002DA97C /* PlacesResponse.json */,
+				050F458F23ED37AB00437D01 /* ApiKey.swift */,
 			);
 			path = RuziVoy;
 			sourceTree = "<group>";
@@ -664,11 +664,11 @@
 				0535FB6923B696AB0008222A /* Repository.swift in Sources */,
 				0535FB6F23B6991A0008222A /* PlaceRestRepository.swift in Sources */,
 				0535FB6B23B697F20008222A /* PlaceRepositoryProtocol.swift in Sources */,
-				0535FB7323B69B970008222A /* Apikey.swift in Sources */,
 				0535FB6D23B698AA0008222A /* PlaceRepository.swift in Sources */,
 				0535FB5F23B6906A0008222A /* PlacesResponse.swift in Sources */,
 				055B12F923BF535C00EC0661 /* LocationsViewController.swift in Sources */,
 				054548E023BA6EEA002DA97C /* PlacePhoto.swift in Sources */,
+				050F459023ED37AB00437D01 /* ApiKey.swift in Sources */,
 				0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */,
 				054548D823B9138E002DA97C /* PlacesViewController.swift in Sources */,
 				05966A9D23B1BF9F00A5F48E /* Interceptor.swift in Sources */,

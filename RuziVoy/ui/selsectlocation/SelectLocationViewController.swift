@@ -2,7 +2,7 @@
 
 import UIKit
 import GoogleMaps
-
+import GooglePlaces
 protocol SelectLocationDelegate: class {
     func selectedLocation(position: CLLocationCoordinate2D, type: LocationType)
 }
@@ -14,7 +14,7 @@ class SelectLocationViewController: UIViewController {
     weak var delegate: SelectLocationDelegate!
     var position: CLLocationCoordinate2D!
     private var searchController: UISearchController!
-    private var resultsTableController: PlacesResultsTableController!
+    private var resultsTableController: GMSAutocompleteResultsViewController!
     
     @IBOutlet weak var viewMap: GMSMapView!
     override func viewDidLoad() {
@@ -28,10 +28,12 @@ class SelectLocationViewController: UIViewController {
     }
     
     func initSearchBar() {
-        resultsTableController = PlacesResultsTableController()
+        resultsTableController = GMSAutocompleteResultsViewController()
+       
+        resultsTableController.delegate = self
+        
         searchController = UISearchController(searchResultsController: resultsTableController)
-        resultsTableController.tableView.delegate = resultsTableController
-        searchController.searchResultsUpdater = self
+        searchController?.searchResultsUpdater = resultsTableController
         searchController.searchBar.autocapitalizationType = .none
         UIBarButtonItem.appearance(whenContainedInInstancesOf:[UISearchBar.self]).tintColor = UIColor.white
         let textFieldInsideSearchBar = self.searchController.searchBar.value(forKey: "searchField") as? UITextField
@@ -50,8 +52,6 @@ class SelectLocationViewController: UIViewController {
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-//        searchController.delegate = self
-//        searchController.searchBar.delegate = self
         definesPresentationContext = true
         self.viewMap.addSubview(searchController.searchBar)
         
@@ -100,15 +100,17 @@ extension SelectLocationViewController: GMSMapViewDelegate {
     }
     
     private func plotMarker(AtCoordinate coordinate : CLLocationCoordinate2D, onMapView vwMap : GMSMapView) {
-        let marker = GMSMarker(position: coordinate)
+        pin(coordinate: coordinate)
+    }
     
-        removeMarkers(mapView: vwMap)
+    func pin(coordinate: CLLocationCoordinate2D) {
+        let marker = GMSMarker(position: coordinate)
+        removeMarkers(mapView: viewMap)
         markers.append(marker)
-        marker.map = vwMap
+        marker.map = viewMap
         position = coordinate
         navigationItem.rightBarButtonItem?.isEnabled = true
     }
-    
     func removeMarkers(mapView: GMSMapView){
         for (index, _) in markers.enumerated() {
             self.markers[index].map = nil
@@ -116,37 +118,27 @@ extension SelectLocationViewController: GMSMapViewDelegate {
     }
 }
 
-
-extension SelectLocationViewController: UISearchControllerDelegate {
-    
-    func presentSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
+extension SelectLocationViewController: GMSAutocompleteResultsViewControllerDelegate {
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
+                           didAutocompleteWith place: GMSPlace) {
+        searchController?.isActive = false
+        let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude,
+                                              zoom: 16)
+        viewMap.camera = camera
+        pin(coordinate: place.coordinate)
     }
     
-    func willPresentSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
+    func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
+                           didFailAutocompleteWithError error: Error){
+        print("Error: ", error.localizedDescription)
     }
     
-    func didPresentSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
-    func willDismissSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
-    
-    func didDismissSearchController(_ searchController: UISearchController) {
-        debugPrint("UISearchControllerDelegate invoked method: \(#function).")
-    }
-    
-}
-
-extension SelectLocationViewController: UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController) {
-//        
-//        viewModel.filterContact(text: searchController.searchBar.text ?? "")
-        
-    }
-    
 }
