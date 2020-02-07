@@ -14,6 +14,7 @@ class LocationsViewController: BaseViewController {
     private let locationManager = CLLocationManager()
     var disposeBag = DisposeBag()
     var viewModel: LocationsViewModel!
+    var coordinates = [CLLocationCoordinate2D]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,12 +67,17 @@ class LocationsViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         viewModel.coordinates.subscribe(onNext: {[weak self] coordinates in
-            let region = GMSVisibleRegion(nearLeft: coordinates[0], nearRight: coordinates[0], farLeft: coordinates[1], farRight: coordinates[2])
-            let bounds = GMSCoordinateBounds(region: region)
-            let camera = self?.mapView.camera(for: bounds, insets: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))!
-            self?.mapView.camera = camera!
-            
+            self?.coordinates = coordinates
+            self?.showCamera(locations: coordinates)
         }).disposed(by: disposeBag)
+    }
+    
+    func showCamera(locations: [CLLocationCoordinate2D]) {
+        let count = locations.count
+        let region = GMSVisibleRegion(nearLeft: coordinates[min(0,3)], nearRight: coordinates[0], farLeft: coordinates[min(count,1)], farRight: coordinates[min(count,2)])
+        let bounds = GMSCoordinateBounds(region: region)
+        let camera = mapView.camera(for: bounds, insets: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))!
+        self.mapView.camera = camera
     }
 }
 
@@ -91,10 +97,8 @@ extension LocationsViewController: CLLocationManagerDelegate {
         guard let location = locations.first else {
             return
         }
-        
-//        let r = GMSVisibleRegion(nearLeft: locations[0].coordinate, nearRight: locations[1].coordinate, farLeft: locations[2].coordinate, farRight: locations[0].coordinate)
-//        GMSCoordinateBounds(region: r)
-//        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        coordinates.append(location.coordinate)
+        showCamera(locations: coordinates)
         locationManager.stopUpdatingLocation()
     }
     
