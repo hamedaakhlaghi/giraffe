@@ -74,10 +74,13 @@ class LocationsViewController: BaseViewController {
     
     func showCamera(locations: [CLLocationCoordinate2D]) {
         let count = locations.count
-        let region = GMSVisibleRegion(nearLeft: coordinates[min(0,3)], nearRight: coordinates[0], farLeft: coordinates[min(count,1)], farRight: coordinates[min(count,2)])
-        let bounds = GMSCoordinateBounds(region: region)
-        let camera = mapView.camera(for: bounds, insets: UIEdgeInsets(top: 150, left: 50, bottom: 50, right: 50))!
-        self.mapView.camera = camera
+        if count > 1 {
+            let lastIndex = count-1
+            let region = GMSVisibleRegion(nearLeft: coordinates[min(lastIndex,3)], nearRight: coordinates[0], farLeft: coordinates[min(lastIndex,1)], farRight: coordinates[min(lastIndex,2)])
+            let bounds = GMSCoordinateBounds(region: region)
+            let camera = mapView.camera(for: bounds, insets: UIEdgeInsets(top: 150, left: 50, bottom: 50, right: 50))!
+            self.mapView.camera = camera
+        }
     }
 }
 
