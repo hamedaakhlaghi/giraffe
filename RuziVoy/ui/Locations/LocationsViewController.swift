@@ -55,12 +55,22 @@ class LocationsViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         viewModel.originMarker.asObserver().subscribe(onNext: { [weak self] marker in
+            
             marker?.map = self?.mapView
         }).disposed(by: disposeBag)
         
         viewModel.destinationMarker.asObserver().subscribe(onNext: { [weak self] marker in
+            
             marker?.icon = GMSMarker.markerImage(with: .blue)
             marker?.map = self?.mapView
+        }).disposed(by: disposeBag)
+        
+        viewModel.coordinates.subscribe(onNext: {[weak self] coordinates in
+            let region = GMSVisibleRegion(nearLeft: coordinates[0], nearRight: coordinates[0], farLeft: coordinates[1], farRight: coordinates[2])
+            let bounds = GMSCoordinateBounds(region: region)
+            let camera = self?.mapView.camera(for: bounds, insets: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))!
+            self?.mapView.camera = camera!
+            
         }).disposed(by: disposeBag)
     }
 }
@@ -82,7 +92,9 @@ extension LocationsViewController: CLLocationManagerDelegate {
             return
         }
         
-        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+//        let r = GMSVisibleRegion(nearLeft: locations[0].coordinate, nearRight: locations[1].coordinate, farLeft: locations[2].coordinate, farRight: locations[0].coordinate)
+//        GMSCoordinateBounds(region: r)
+//        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         locationManager.stopUpdatingLocation()
     }
     

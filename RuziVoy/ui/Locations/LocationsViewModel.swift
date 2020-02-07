@@ -12,13 +12,21 @@ class LocationsViewModel {
     var placeMarker = BehaviorSubject<GMSMarker?>(value: nil)
     var originMarker = BehaviorSubject<GMSMarker?>(value: nil)
     var destinationMarker = BehaviorSubject<GMSMarker?>(value: nil)
+    
+    var coordinates: Observable<[CLLocationCoordinate2D]> {
+        return Observable.combineLatest(placeMarker.asObservable(), originMarker.asObservable(), destinationMarker.asObservable() ).map {place, origin, destination in
+            if let p = place, let o = origin, let d = destination {
+                return [p.position, o.position, d.position]
+            }
+            return []
+        }
+    }
     init(place: Place, origin: Location, destination: Location ) {
         
         self.place.onNext(place)
         let placeLocation = CLLocationCoordinate2D(latitude: place.location.lat, longitude: place.location.lng)
         let placeM = GMSMarker(position: placeLocation)
         placeMarker.onNext(placeM)
-        
         let originLocation = CLLocationCoordinate2D(latitude: origin.lat, longitude: origin.lng)
         let originM = GMSMarker(position: originLocation)
         originMarker.onNext(originM)
