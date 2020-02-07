@@ -76,7 +76,7 @@ class LocationsViewController: BaseViewController {
         let count = locations.count
         let region = GMSVisibleRegion(nearLeft: coordinates[min(0,3)], nearRight: coordinates[0], farLeft: coordinates[min(count,1)], farRight: coordinates[min(count,2)])
         let bounds = GMSCoordinateBounds(region: region)
-        let camera = mapView.camera(for: bounds, insets: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))!
+        let camera = mapView.camera(for: bounds, insets: UIEdgeInsets(top: 150, left: 50, bottom: 50, right: 50))!
         self.mapView.camera = camera
     }
 }
