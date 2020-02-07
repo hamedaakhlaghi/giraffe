@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Origin Destination View Controller-->
+        <!--Plan a Night-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OriginDestinationViewController" customModule="RuziVoy" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CD5-da-oOL">
-                                <rect key="frame" x="208" y="163.5" width="196" height="134.5"/>
+                                <rect key="frame" x="208" y="137" width="196" height="134.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWd-Do-cIn">
                                         <rect key="frame" x="10" y="10" width="48" height="23"/>
@@ -47,8 +47,8 @@
                                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ATC-W5-Z2v" secondAttribute="bottom" constant="5" id="rKW-6M-R56"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan a Night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-Lk-avh">
-                                <rect key="frame" x="20" y="108" width="114.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-Lk-avh">
+                                <rect key="frame" x="20" y="108" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTV-4c-XFl">
-                                <rect key="frame" x="10" y="163.5" width="196" height="134.5"/>
+                                <rect key="frame" x="10" y="137" width="196" height="134.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Leave" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xen-1j-goS">
                                         <rect key="frame" x="10" y="10" width="50" height="23"/>
@@ -124,7 +124,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fbY-yx-BQI"/>
+                    <navigationItem key="navigationItem" title="Plan a Night" id="fbY-yx-BQI">
+                        <barButtonItem key="backBarButtonItem" title="Plan" id="rgX-XV-JCA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonDinner" destination="j9x-q2-gdL" id="Yck-Mw-J6P"/>
                         <outlet property="labelAt" destination="ATC-W5-Z2v" id="mFS-Ks-YaF"/>
@@ -177,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="1936" y="117"/>
         </scene>
-        <!--Locations View Controller-->
+        <!--Locations-->
         <scene sceneID="NOc-uV-KlT">
             <objects>
                 <viewController id="ytF-x0-5pr" customClass="LocationsViewController" customModule="RuziVoy" customModuleProvider="target" sceneMemberID="viewController">
@@ -244,6 +246,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vmS-vY-twv"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Locations" id="k7H-XT-vbR"/>
                     <connections>
                         <outlet property="labelPlaceName" destination="H0V-Bk-yz8" id="Zc9-aY-2lE"/>
                         <outlet property="mapView" destination="Eux-cC-LsC" id="rL6-It-z5m"/>
@@ -256,7 +259,7 @@
             </objects>
             <point key="canvasLocation" x="2805.7971014492755" y="778.79464285714278"/>
         </scene>
-        <!--Places View Controller-->
+        <!--Places-->
         <scene sceneID="BRm-4W-zkk">
             <objects>
                 <viewController id="H4q-JU-kw9" customClass="PlacesViewController" customModule="RuziVoy" customModuleProvider="target" sceneMemberID="viewController">
@@ -361,6 +364,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="izt-tt-gag"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Places" id="lMK-c5-fFU"/>
                     <connections>
                         <outlet property="tableView" destination="f5E-jV-SZX" id="bqH-3w-Y8o"/>
                         <segue destination="ytF-x0-5pr" kind="show" identifier="placesToShowAll" id="LCu-RD-9De"/>
@@ -378,7 +382,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pgI-ZV-wD6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="1" green="0.66158556719999995" blue="0.14466675339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
