@@ -8,6 +8,8 @@ class ApiHelper {
     
    
     static let PLSCES_PATH = "maps/api/place/nearbysearch/json"
+    static let DISTANCE_MATRIX_PATH = "maps/api/distancematrix/json"
+    
     static let GET_VERB = "GET"
     var alamofire: SessionManager!
     

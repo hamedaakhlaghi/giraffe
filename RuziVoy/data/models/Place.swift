@@ -10,6 +10,12 @@ class Place: NSObject, Mappable {
     var vicinity: String!
     var name: String!
     var photos: [PlacePhoto]?
+    var distanceFromOrigin: Distance?
+    var durationFromOrigin: Duration?
+    var distanceFromDestination: Distance?
+    var durationFromDestination: Duration?
+    
+    
     override init() {
         
     }
@@ -28,5 +34,21 @@ class Place: NSObject, Mappable {
         vicinity <- map["vicinity"]
         name <- map["name"]
         photos<-map["photos"]
+    }
+    
+    func getOriginDistanceValue()->String {
+        if let dis = distanceFromOrigin, let dur = durationFromOrigin{
+            let value = "\(dis.text ?? "") in \(dur.text ?? "")"
+            return value
+        }
+        return ""
+    }
+    
+    func getDestinationDistance()->String {
+        if let dis = distanceFromDestination, let dur = durationFromDestination {
+            let value = "\(dis.text ?? "") in \(dur.text ?? "")"
+            return value
+        }
+        return ""
     }
 }

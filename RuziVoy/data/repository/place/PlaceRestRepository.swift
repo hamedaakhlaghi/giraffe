@@ -1,13 +1,6 @@
 import Foundation
 import Alamofire
 class PlaceRestRepository: PlaceRepositoryProtocl {
-    func get(identifier: Int, onDone: ((RepositoryResponse<Place>) -> ())?) {
-        
-    }
-    
-    func getAll(onDone: ((RepositoryResponse<[Place]>) -> ())?) {
-        
-    }
     
     func getAll(query: [URLQueryItem], onDone: ((RepositoryResponse<PlacesResponse>) -> ())?) {
         let apiHelper = ApiHelper.instance

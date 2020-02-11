@@ -25,6 +25,14 @@
 		054548DA23B913A4002DA97C /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054548D923B913A4002DA97C /* PlacesViewModel.swift */; };
 		054548DE23BA66E3002DA97C /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054548DD23BA66E3002DA97C /* PlaceTableViewCell.swift */; };
 		054548E023BA6EEA002DA97C /* PlacePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054548DF23BA6EEA002DA97C /* PlacePhoto.swift */; };
+		054CE35123F1F7B800F96FE5 /* DistanceMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CE35023F1F7B700F96FE5 /* DistanceMatrix.swift */; };
+		054CE35323F27E4100F96FE5 /* MatrixRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CE35223F27E4100F96FE5 /* MatrixRows.swift */; };
+		054CE35723F27FEA00F96FE5 /* MatrixElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CE35623F27FEA00F96FE5 /* MatrixElement.swift */; };
+		054CE35923F2807E00F96FE5 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CE35823F2807E00F96FE5 /* Distance.swift */; };
+		054CE35B23F280E900F96FE5 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CE35A23F280E900F96FE5 /* Duration.swift */; };
+		054CE35D23F28BED00F96FE5 /* DistanceMatrixRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CE35C23F28BED00F96FE5 /* DistanceMatrixRepositoryProtocol.swift */; };
+		054CE36023F28CF200F96FE5 /* DistanceMatrixRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CE35F23F28CF200F96FE5 /* DistanceMatrixRepository.swift */; };
+		054CE36223F28DB000F96FE5 /* DistanceMatrixRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CE36123F28DB000F96FE5 /* DistanceMatrixRestRepository.swift */; };
 		055B12F923BF535C00EC0661 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B12F823BF535C00EC0661 /* LocationsViewController.swift */; };
 		055B12FC23BF538000EC0661 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B12FB23BF538000EC0661 /* LocationsViewModel.swift */; };
 		056CCB5423C3D4DC00D78EAD /* PlacesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 054548DB23B9396A002DA97C /* PlacesResponse.json */; };
@@ -82,6 +90,14 @@
 		054548DB23B9396A002DA97C /* PlacesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PlacesResponse.json; sourceTree = "<group>"; };
 		054548DD23BA66E3002DA97C /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		054548DF23BA6EEA002DA97C /* PlacePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePhoto.swift; sourceTree = "<group>"; };
+		054CE35023F1F7B700F96FE5 /* DistanceMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceMatrix.swift; sourceTree = "<group>"; };
+		054CE35223F27E4100F96FE5 /* MatrixRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRows.swift; sourceTree = "<group>"; };
+		054CE35623F27FEA00F96FE5 /* MatrixElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixElement.swift; sourceTree = "<group>"; };
+		054CE35823F2807E00F96FE5 /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
+		054CE35A23F280E900F96FE5 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		054CE35C23F28BED00F96FE5 /* DistanceMatrixRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrixRepositoryProtocol.swift; sourceTree = "<group>"; };
+		054CE35F23F28CF200F96FE5 /* DistanceMatrixRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrixRepository.swift; sourceTree = "<group>"; };
+		054CE36123F28DB000F96FE5 /* DistanceMatrixRestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceMatrixRestRepository.swift; sourceTree = "<group>"; };
 		055B12F823BF535C00EC0661 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		055B12FB23BF538000EC0661 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		057A374023CE495100BB4DB3 /* RuziVoy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuziVoy.entitlements; sourceTree = "<group>"; };
@@ -205,6 +221,16 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		054CE35E23F28BF500F96FE5 /* DistanceMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				054CE35C23F28BED00F96FE5 /* DistanceMatrixRepositoryProtocol.swift */,
+				054CE35F23F28CF200F96FE5 /* DistanceMatrixRepository.swift */,
+				054CE36123F28DB000F96FE5 /* DistanceMatrixRestRepository.swift */,
+			);
+			path = DistanceMatrix;
+			sourceTree = "<group>";
+		};
 		055B12FA23BF536100EC0661 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,10 +269,15 @@
 		05966A9723B1BE1E00A5F48E /* models */ = {
 			isa = PBXGroup;
 			children = (
+				054CE35023F1F7B700F96FE5 /* DistanceMatrix.swift */,
 				0535FB5E23B6906A0008222A /* PlacesResponse.swift */,
 				0535FB6023B6917C0008222A /* Place.swift */,
 				0535FB6223B693540008222A /* Location.swift */,
 				054548DF23BA6EEA002DA97C /* PlacePhoto.swift */,
+				054CE35223F27E4100F96FE5 /* MatrixRows.swift */,
+				054CE35623F27FEA00F96FE5 /* MatrixElement.swift */,
+				054CE35823F2807E00F96FE5 /* Distance.swift */,
+				054CE35A23F280E900F96FE5 /* Duration.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -263,6 +294,7 @@
 		05966A9923B1BE3800A5F48E /* repository */ = {
 			isa = PBXGroup;
 			children = (
+				054CE35E23F28BF500F96FE5 /* DistanceMatrix */,
 				0535FB6523B6960E0008222A /* base */,
 				0535FB6423B696030008222A /* place */,
 			);
@@ -666,15 +698,23 @@
 				0535FB6B23B697F20008222A /* PlaceRepositoryProtocol.swift in Sources */,
 				0535FB6D23B698AA0008222A /* PlaceRepository.swift in Sources */,
 				0535FB5F23B6906A0008222A /* PlacesResponse.swift in Sources */,
+				054CE35323F27E4100F96FE5 /* MatrixRows.swift in Sources */,
 				055B12F923BF535C00EC0661 /* LocationsViewController.swift in Sources */,
 				054548E023BA6EEA002DA97C /* PlacePhoto.swift in Sources */,
 				050F459023ED37AB00437D01 /* ApiKey.swift in Sources */,
 				0525BBFB23ACFC4A008EDDF2 /* OriginDestinationViewController.swift in Sources */,
+				054CE35123F1F7B800F96FE5 /* DistanceMatrix.swift in Sources */,
 				054548D823B9138E002DA97C /* PlacesViewController.swift in Sources */,
+				054CE35D23F28BED00F96FE5 /* DistanceMatrixRepositoryProtocol.swift in Sources */,
 				05966A9D23B1BF9F00A5F48E /* Interceptor.swift in Sources */,
+				054CE36223F28DB000F96FE5 /* DistanceMatrixRestRepository.swift in Sources */,
+				054CE35723F27FEA00F96FE5 /* MatrixElement.swift in Sources */,
 				055B12FC23BF538000EC0661 /* LocationsViewModel.swift in Sources */,
+				054CE35923F2807E00F96FE5 /* Distance.swift in Sources */,
+				054CE36023F28CF200F96FE5 /* DistanceMatrixRepository.swift in Sources */,
 				050F458E23E743AA00437D01 /* PlacesResultsTableController.swift in Sources */,
 				054548DE23BA66E3002DA97C /* PlaceTableViewCell.swift in Sources */,
+				054CE35B23F280E900F96FE5 /* Duration.swift in Sources */,
 				0535FB6123B6917C0008222A /* Place.swift in Sources */,
 				0535FB6323B693540008222A /* Location.swift in Sources */,
 				0525BC0223AD0EE5008EDDF2 /* R.generated.swift in Sources */,

@@ -33,6 +33,8 @@ class PlacesViewController: BaseViewController {
             self?.places = places
             self?.tableView.reloadData()
         }).disposed(by: disposeBag!)
+        viewModel.originLocation = originLocation
+        viewModel.destinationLocation = destinationLocation
         viewModel.getPlaces(location: originLocation)
         
     }
