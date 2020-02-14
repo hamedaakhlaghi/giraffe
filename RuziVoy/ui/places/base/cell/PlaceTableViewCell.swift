@@ -28,6 +28,9 @@ class PlaceTableViewCell: UITableViewCell {
     }
     
     func set(place: Place) {
+        for imageView in images {
+            imageView.image = nil
+        }
         labelName.text = place.name
         labelRank.text = "\(place.rating)"
         labelPrice.text = "\(place.priceLevel)"

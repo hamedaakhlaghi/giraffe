@@ -14,7 +14,8 @@ class DistanceMatrixRestRepository: DistanceMatrixRepositoryProtocol {
         queryItems.append(destinationQuery)
         let apnQuery = URLQueryItem(name: "key", value: ApiKey.key)
         queryItems.append(apnQuery)
-        
+        let unitQuery = URLQueryItem(name: "units", value: "imperial")
+        queryItems.append(unitQuery)
         urlComponent.queryItems = queryItems
         
         let request = URLRequest(url: urlComponent.url!)
